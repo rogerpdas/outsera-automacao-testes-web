@@ -1,4 +1,4 @@
-# 🧪 SauceDemo E2E Test Automation - Desafio Outsera
+# SauceDemo E2E Test Automation - Desafio Outsera
 
 Projeto de automação de testes End-to-End para atender os critérios do desafio Outsera, utilizando a plataforma [SauceDemo](https://www.saucedemo.com), cobrindo os fluxos de **autenticação** e **checkout completo** de e-commerce, tanto com dados válidos quanto inválidos.
 

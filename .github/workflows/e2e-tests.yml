@@ -1,4 +1,4 @@
-name: E2E Test Automation - SauceDemo
+name: E2E Test Automation - Desafio Outsera
 
 on:
   push:
@@ -22,7 +22,7 @@ on:
       headless:
         description: 'Executar em modo headless'
         required: true
-        default: 'true'
+        default: true
         type: boolean
       tags:
         description: 'Tags Cucumber (ex: @smoke, @login)'
@@ -39,37 +39,37 @@ jobs:
   # Job Único: E2E Tests (Todas as Features)
   # -------------------------------------------------------
   e2e-tests:
-    name: 🧪 E2E Tests (${{ github.event.inputs.browser || 'chrome' }})
+    name: E2E Tests (${{ github.event.inputs.browser || 'chrome' }})
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
     steps:
-      - name: 📥 Checkout Repository
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: ☕ Setup Java ${{ env.JAVA_VERSION }}
+      - name: Setup Java ${{ env.JAVA_VERSION }}
         uses: actions/setup-java@v4
         with:
           java-version: ${{ env.JAVA_VERSION }}
           distribution: 'temurin'
           cache: 'maven'
 
-      - name: 🌐 Setup Chrome Browser
+      - name: Setup Chrome Browser
         if: env.BROWSER == 'chrome' || env.BROWSER == ''
         uses: browser-actions/setup-chrome@latest
 
-      - name: 🦊 Setup Firefox Browser
+      - name: Setup Firefox Browser
         if: env.BROWSER == 'firefox'
         uses: browser-actions/setup-firefox@latest
 
-      - name: 🟦 Setup Edge Browser
+      - name: Setup Edge Browser
         if: env.BROWSER == 'edge'
         uses: browser-actions/setup-edge@latest
 
-      - name: 📦 Install Dependencies
+      - name: Install Dependencies
         run: mvn dependency:resolve --no-transfer-progress
 
-      - name: 🧪 Run All Cucumber Tests
+      - name: Run All Cucumber Tests
         run: |
           mvn test \
             -Dbrowser=${{ env.BROWSER }} \
@@ -78,7 +78,7 @@ jobs:
         env:
           DISPLAY: ':99'
 
-      - name: 📊 Upload Test Report Artifact
+      - name: Upload Test Report Artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -89,10 +89,10 @@ jobs:
             reports/test-execution.log
           retention-days: 30
 
-      - name: 📢 Summary
+      - name: Summary
         if: always()
         run: |
-          echo "## 🧪 E2E Test Execution Summary" >> $GITHUB_STEP_SUMMARY
+          echo "## 🧪 E2E Test Execution Summary - Desafio Outsera" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "| Suite        | Status |" >> $GITHUB_STEP_SUMMARY
           echo "|-------------|--------|" >> $GITHUB_STEP_SUMMARY
@@ -101,7 +101,7 @@ jobs:
           echo "**Browser:** ${{ env.BROWSER }} | **Headless:** ${{ env.HEADLESS }}" >> $GITHUB_STEP_SUMMARY
           echo "**Trigger:** ${{ github.event_name }} | **Branch:** ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
 
-      - name: 🚀 Deploy Report to GitHub Pages
+      - name: Deploy Report to GitHub Pages
         if: always()
         uses: peaceiris/actions-gh-pages@v3
         with:
