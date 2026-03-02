@@ -1,0 +1,111 @@
+name: E2E Test Automation - SauceDemo
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  schedule:
+    # Executa todos os dias às 06:00 UTC (03:00 BRT)
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+    inputs:
+      browser:
+        description: 'Browser para execução dos testes'
+        required: true
+        default: 'chrome'
+        type: choice
+        options:
+          - chrome
+          - firefox
+          - edge
+      headless:
+        description: 'Executar em modo headless'
+        required: true
+        default: 'true'
+        type: boolean
+      tags:
+        description: 'Tags Cucumber (ex: @smoke, @login)'
+        required: false
+        default: ''
+
+env:
+  JAVA_VERSION: '17'
+  BROWSER: ${{ github.event.inputs.browser || 'chrome' }}
+  HEADLESS: ${{ github.event.inputs.headless || 'true' }}
+
+jobs:
+  # -------------------------------------------------------
+  # Job Único: E2E Tests (Todas as Features)
+  # -------------------------------------------------------
+  e2e-tests:
+    name: 🧪 E2E Tests (${{ github.event.inputs.browser || 'chrome' }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: ☕ Setup Java ${{ env.JAVA_VERSION }}
+        uses: actions/setup-java@v4
+        with:
+          java-version: ${{ env.JAVA_VERSION }}
+          distribution: 'temurin'
+          cache: 'maven'
+
+      - name: 🌐 Setup Chrome Browser
+        if: env.BROWSER == 'chrome' || env.BROWSER == ''
+        uses: browser-actions/setup-chrome@latest
+
+      - name: 🦊 Setup Firefox Browser
+        if: env.BROWSER == 'firefox'
+        uses: browser-actions/setup-firefox@latest
+
+      - name: 🟦 Setup Edge Browser
+        if: env.BROWSER == 'edge'
+        uses: browser-actions/setup-edge@latest
+
+      - name: 📦 Install Dependencies
+        run: mvn dependency:resolve --no-transfer-progress
+
+      - name: 🧪 Run All Cucumber Tests
+        run: |
+          mvn test \
+            -Dbrowser=${{ env.BROWSER }} \
+            -Dheadless=${{ env.HEADLESS }} \
+            --no-transfer-progress
+        env:
+          DISPLAY: ':99'
+
+      - name: 📊 Upload Test Report Artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: e2e-test-report-${{ env.BROWSER }}
+          path: |
+            reports/ExtentReport.html
+            reports/screenshots/
+            reports/test-execution.log
+          retention-days: 30
+
+      - name: 📢 Summary
+        if: always()
+        run: |
+          echo "## 🧪 E2E Test Execution Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Suite        | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|-------------|--------|" >> $GITHUB_STEP_SUMMARY
+          echo "| All Tests  | ${{ job.status == 'success' && '✅ Passed' || '❌ Failed' }} |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Browser:** ${{ env.BROWSER }} | **Headless:** ${{ env.HEADLESS }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Trigger:** ${{ github.event_name }} | **Branch:** ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
+
+      - name: 🚀 Deploy Report to GitHub Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./reports
+          publish_branch: gh-pages
+          keep_files: false

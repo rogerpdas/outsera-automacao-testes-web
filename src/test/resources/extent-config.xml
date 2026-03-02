@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+        <theme>DARK</theme>
+        <encoding>UTF-8</encoding>
+        <documentTitle>SauceDemo E2E Test Report</documentTitle>
+        <reportName>Automation Test Results</reportName>
+        <timeStampFormat>dd/MM/yyyy HH:mm:ss</timeStampFormat>
+        <css></css>
+        <js></js>
+    </configuration>
+</extentreports>
