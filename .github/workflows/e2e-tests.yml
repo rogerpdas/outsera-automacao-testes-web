@@ -97,6 +97,11 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "**Browser:** ${{ env.BROWSER }} | **Headless:** ${{ env.HEADLESS }}" >> $GITHUB_STEP_SUMMARY
           echo "**Trigger:** ${{ github.event_name }} | **Branch:** ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Report:** https://rogerpdas.github.io/outsera-automacao-testes-web/index.html" >> $GITHUB_STEP_SUMMARY
+
+      - name: Prep GitHub Pages Index
+        if: always()
+        run: cp reports/ExtentReport.html reports/index.html
 
       - name: Deploy Report to GitHub Pages
         if: always()

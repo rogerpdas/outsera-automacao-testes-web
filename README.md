@@ -222,6 +222,7 @@ Para executar manualmente no GitHub:
 3. Clique em **Run workflow**
 4. Selecione browser e headless desejados
 
+- O relatório é gerado automaticamente após a execução dos testes e pode ser acessado na aba **Actions** do repositório, na opção **Artifacts** ou acesse o link: https://rogerpdas.github.io/outsera-automacao-testes-web/index.html.
 ---
 
 ## Padrões/Boas Práticas

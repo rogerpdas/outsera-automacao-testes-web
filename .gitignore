@@ -9,7 +9,7 @@ target/
 *.xml.bak
 
 # Reports (generated at runtime)
-reports/
+#reports/
 !reports/.gitkeep
 
 # OS
