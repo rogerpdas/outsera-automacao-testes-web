@@ -1,0 +1,71 @@
+2026-03-05 15:28:13.551 [main] INFO  com.saucedemo.hooks.Hooks - ========== Starting Test Suite ==========
+2026-03-05 15:28:13.765 [main] INFO  com.saucedemo.hooks.Hooks - ---> Starting Scenario: [Login com credenciais válidas] | Tags: [@login, @smoke, @login-valido]
+2026-03-05 15:28:13.768 [main] INFO  com.saucedemo.config.ConfigManager - Configuration loaded from config.properties
+2026-03-05 15:28:13.768 [main] INFO  com.saucedemo.config.DriverManager - Initializing chrome driver | headless=true
+2026-03-05 15:28:23.267 [main] INFO  com.saucedemo.config.DriverManager - Driver initialized successfully: ChromeDriver
+2026-03-05 15:28:23.286 [main] INFO  com.saucedemo.pages.BasePage - Navigating to: https://www.saucedemo.com
+2026-03-05 15:28:24.191 [main] INFO  com.saucedemo.pages.LoginPage - Navigated to Login page.
+2026-03-05 15:28:24.194 [main] INFO  com.saucedemo.pages.LoginPage - Entering username: standard_user
+2026-03-05 15:28:24.532 [main] INFO  com.saucedemo.pages.LoginPage - Entering password.
+2026-03-05 15:28:24.642 [main] INFO  com.saucedemo.pages.LoginPage - Clicking login button.
+2026-03-05 15:28:24.911 [main] INFO  c.s.validators.LoginValidator - Validating successful login.
+2026-03-05 15:28:25.000 [main] INFO  c.s.validators.LoginValidator - Login validation passed: user is on Products page.
+2026-03-05 15:28:25.002 [main] INFO  com.saucedemo.hooks.Hooks - <--- Finished Scenario: [Login com credenciais válidas] | Status: PASSED
+2026-03-05 15:28:25.078 [main] INFO  com.saucedemo.config.DriverManager - Driver quit successfully.
+2026-03-05 15:28:25.090 [main] INFO  com.saucedemo.hooks.Hooks - ---> Starting Scenario: [Login com senha inválida] | Tags: [@login, @login-senha-invalida]
+2026-03-05 15:28:25.090 [main] INFO  com.saucedemo.config.DriverManager - Initializing chrome driver | headless=true
+2026-03-05 15:28:25.462 [main] INFO  com.saucedemo.config.DriverManager - Driver initialized successfully: ChromeDriver
+2026-03-05 15:28:25.463 [main] INFO  com.saucedemo.pages.BasePage - Navigating to: https://www.saucedemo.com
+2026-03-05 15:28:25.654 [main] INFO  com.saucedemo.pages.LoginPage - Navigated to Login page.
+2026-03-05 15:28:25.656 [main] INFO  com.saucedemo.pages.LoginPage - Entering username: standard_user
+2026-03-05 15:28:25.814 [main] INFO  com.saucedemo.pages.LoginPage - Entering password.
+2026-03-05 15:28:25.929 [main] INFO  com.saucedemo.pages.LoginPage - Clicking login button.
+2026-03-05 15:28:26.039 [main] INFO  c.s.validators.LoginValidator - Validating failed login with expected message: 'Epic sadface: Username and password do not match any user in this service'
+2026-03-05 15:28:26.130 [main] INFO  c.s.validators.LoginValidator - Login failure validation passed.
+2026-03-05 15:28:26.131 [main] INFO  com.saucedemo.hooks.Hooks - <--- Finished Scenario: [Login com senha inválida] | Status: PASSED
+2026-03-05 15:28:26.203 [main] INFO  com.saucedemo.config.DriverManager - Driver quit successfully.
+2026-03-05 15:28:26.211 [main] INFO  com.saucedemo.hooks.Hooks - ---> Starting Scenario: [Login com usuário inexistente] | Tags: [@login, @login-usuario-inexistente]
+2026-03-05 15:28:26.211 [main] INFO  com.saucedemo.config.DriverManager - Initializing chrome driver | headless=true
+2026-03-05 15:28:26.476 [main] INFO  com.saucedemo.config.DriverManager - Driver initialized successfully: ChromeDriver
+2026-03-05 15:28:26.478 [main] INFO  com.saucedemo.pages.BasePage - Navigating to: https://www.saucedemo.com
+2026-03-05 15:28:26.675 [main] INFO  com.saucedemo.pages.LoginPage - Navigated to Login page.
+2026-03-05 15:28:26.676 [main] INFO  com.saucedemo.pages.LoginPage - Entering username: usuario_inexistente
+2026-03-05 15:28:26.833 [main] INFO  com.saucedemo.pages.LoginPage - Entering password.
+2026-03-05 15:28:26.950 [main] INFO  com.saucedemo.pages.LoginPage - Clicking login button.
+2026-03-05 15:28:27.052 [main] INFO  c.s.validators.LoginValidator - Validating failed login with expected message: 'Epic sadface: Username and password do not match any user in this service'
+2026-03-05 15:28:27.134 [main] INFO  c.s.validators.LoginValidator - Login failure validation passed.
+2026-03-05 15:28:27.135 [main] INFO  com.saucedemo.hooks.Hooks - <--- Finished Scenario: [Login com usuário inexistente] | Status: PASSED
+2026-03-05 15:28:27.207 [main] INFO  com.saucedemo.config.DriverManager - Driver quit successfully.
+2026-03-05 15:28:27.214 [main] INFO  com.saucedemo.hooks.Hooks - ---> Starting Scenario: [Login com campos em branco] | Tags: [@login, @login-campos-em-branco]
+2026-03-05 15:28:27.214 [main] INFO  com.saucedemo.config.DriverManager - Initializing chrome driver | headless=true
+2026-03-05 15:28:27.499 [main] INFO  com.saucedemo.config.DriverManager - Driver initialized successfully: ChromeDriver
+2026-03-05 15:28:27.500 [main] INFO  com.saucedemo.pages.BasePage - Navigating to: https://www.saucedemo.com
+2026-03-05 15:28:27.694 [main] INFO  com.saucedemo.pages.LoginPage - Navigated to Login page.
+2026-03-05 15:28:27.696 [main] INFO  com.saucedemo.pages.LoginPage - Submitting empty login form.
+2026-03-05 15:28:27.833 [main] INFO  c.s.validators.LoginValidator - Validating failed login with expected message: 'Epic sadface: Username is required'
+2026-03-05 15:28:27.949 [main] INFO  c.s.validators.LoginValidator - Login failure validation passed.
+2026-03-05 15:28:27.950 [main] INFO  com.saucedemo.hooks.Hooks - <--- Finished Scenario: [Login com campos em branco] | Status: PASSED
+2026-03-05 15:28:28.023 [main] INFO  com.saucedemo.config.DriverManager - Driver quit successfully.
+2026-03-05 15:28:28.029 [main] INFO  com.saucedemo.hooks.Hooks - ---> Starting Scenario: [Login sem informar a senha] | Tags: [@login, @login-senha-em-branco]
+2026-03-05 15:28:28.029 [main] INFO  com.saucedemo.config.DriverManager - Initializing chrome driver | headless=true
+2026-03-05 15:28:28.299 [main] INFO  com.saucedemo.config.DriverManager - Driver initialized successfully: ChromeDriver
+2026-03-05 15:28:28.300 [main] INFO  com.saucedemo.pages.BasePage - Navigating to: https://www.saucedemo.com
+2026-03-05 15:28:28.501 [main] INFO  com.saucedemo.pages.LoginPage - Navigated to Login page.
+2026-03-05 15:28:28.503 [main] INFO  com.saucedemo.pages.LoginPage - Submitting form with empty password.
+2026-03-05 15:28:28.768 [main] INFO  c.s.validators.LoginValidator - Validating failed login with expected message: 'Epic sadface: Password is required'
+2026-03-05 15:28:28.846 [main] INFO  c.s.validators.LoginValidator - Login failure validation passed.
+2026-03-05 15:28:28.847 [main] INFO  com.saucedemo.hooks.Hooks - <--- Finished Scenario: [Login sem informar a senha] | Status: PASSED
+2026-03-05 15:28:28.918 [main] INFO  com.saucedemo.config.DriverManager - Driver quit successfully.
+2026-03-05 15:28:28.923 [main] INFO  com.saucedemo.hooks.Hooks - ---> Starting Scenario: [Login com usuário bloqueado] | Tags: [@login, @login-usuario-bloqueado]
+2026-03-05 15:28:28.923 [main] INFO  com.saucedemo.config.DriverManager - Initializing chrome driver | headless=true
+2026-03-05 15:28:29.199 [main] INFO  com.saucedemo.config.DriverManager - Driver initialized successfully: ChromeDriver
+2026-03-05 15:28:29.199 [main] INFO  com.saucedemo.pages.BasePage - Navigating to: https://www.saucedemo.com
+2026-03-05 15:28:29.383 [main] INFO  com.saucedemo.pages.LoginPage - Navigated to Login page.
+2026-03-05 15:28:29.384 [main] INFO  com.saucedemo.pages.LoginPage - Entering username: locked_out_user
+2026-03-05 15:28:29.543 [main] INFO  com.saucedemo.pages.LoginPage - Entering password.
+2026-03-05 15:28:29.651 [main] INFO  com.saucedemo.pages.LoginPage - Clicking login button.
+2026-03-05 15:28:29.751 [main] INFO  c.s.validators.LoginValidator - Validating failed login with expected message: 'Epic sadface: Sorry, this user has been locked out'
+2026-03-05 15:28:29.827 [main] INFO  c.s.validators.LoginValidator - Login failure validation passed.
+2026-03-05 15:28:29.828 [main] INFO  com.saucedemo.hooks.Hooks - <--- Finished Scenario: [Login com usuário bloqueado] | Status: PASSED
+2026-03-05 15:28:29.900 [main] INFO  com.saucedemo.config.DriverManager - Driver quit successfully.
+2026-03-05 15:28:29.902 [main] INFO  com.saucedemo.hooks.Hooks - ========== Test Suite Completed | Report generated ==========
