@@ -1,157 +1,157 @@
-2026-10-21 11:21:11.152 [main] INFO  com.saucedemo.hooks.Hooks - ========== Starting Test Suite ==========
-2026-10-21 11:21:11.320 [main] INFO  com.saucedemo.hooks.Hooks - ---> Starting Scenario: [Adicionar um produto ao carrinho] | Tags: [@checkout, @smoke, @carrinho-adicionar]
-2026-10-21 11:21:11.322 [main] INFO  com.saucedemo.config.ConfigManager - Configuration loaded from config.properties
-2026-10-21 11:21:11.322 [main] INFO  com.saucedemo.config.DriverManager - Initializing chrome driver | headless=true
-2026-10-21 11:21:18.838 [main] INFO  com.saucedemo.config.DriverManager - Driver initialized successfully: ChromeDriver
-2026-10-21 11:21:18.857 [main] INFO  com.saucedemo.pages.BasePage - Navigating to: https://www.saucedemo.com
-2026-10-21 11:21:19.209 [main] INFO  com.saucedemo.pages.LoginPage - Navigated to Login page.
-2026-10-21 11:21:19.209 [main] INFO  com.saucedemo.pages.LoginPage - Entering username: standard_user
-2026-10-21 11:21:19.583 [main] INFO  com.saucedemo.pages.LoginPage - Entering password.
-2026-10-21 11:21:19.677 [main] INFO  com.saucedemo.pages.LoginPage - Clicking login button.
-2026-10-21 11:21:19.853 [main] INFO  c.s.validators.LoginValidator - Validating successful login.
-2026-10-21 11:21:20.018 [main] INFO  c.s.validators.LoginValidator - Login validation passed: user is on Products page.
-2026-10-21 11:21:20.021 [main] INFO  com.saucedemo.pages.InventoryPage - Adding item to cart: sauce-labs-backpack
-2026-10-21 11:21:20.108 [main] INFO  c.s.validators.CheckoutValidator - Validating item count in cart badge: expected=1
-2026-10-21 11:21:20.155 [main] INFO  com.saucedemo.hooks.Hooks - <--- Finished Scenario: [Adicionar um produto ao carrinho] | Status: PASSED
-2026-10-21 11:21:21.160 [main] INFO  com.saucedemo.config.DriverManager - Driver quit successfully.
-2026-10-21 11:21:21.171 [main] INFO  com.saucedemo.hooks.Hooks - ---> Starting Scenario: [Adicionar múltiplos produtos ao carrinho] | Tags: [@checkout, @carrinho-multiplos-itens]
-2026-10-21 11:21:21.171 [main] INFO  com.saucedemo.config.DriverManager - Initializing chrome driver | headless=true
-2026-10-21 11:21:21.689 [main] INFO  com.saucedemo.config.DriverManager - Driver initialized successfully: ChromeDriver
-2026-10-21 11:21:21.691 [main] INFO  com.saucedemo.pages.BasePage - Navigating to: https://www.saucedemo.com
-2026-10-21 11:21:21.893 [main] INFO  com.saucedemo.pages.LoginPage - Navigated to Login page.
-2026-10-21 11:21:21.894 [main] INFO  com.saucedemo.pages.LoginPage - Entering username: standard_user
-2026-10-21 11:21:22.039 [main] INFO  com.saucedemo.pages.LoginPage - Entering password.
-2026-10-21 11:21:22.148 [main] INFO  com.saucedemo.pages.LoginPage - Clicking login button.
-2026-10-21 11:21:22.249 [main] INFO  c.s.validators.LoginValidator - Validating successful login.
-2026-10-21 11:21:22.342 [main] INFO  c.s.validators.LoginValidator - Login validation passed: user is on Products page.
-2026-10-21 11:21:22.343 [main] INFO  com.saucedemo.pages.InventoryPage - Adding item to cart: sauce-labs-backpack
-2026-10-21 11:21:22.415 [main] INFO  com.saucedemo.pages.InventoryPage - Adding item to cart: sauce-labs-bike-light
-2026-10-21 11:21:22.495 [main] INFO  c.s.validators.CheckoutValidator - Validating item count in cart badge: expected=2
-2026-10-21 11:21:22.540 [main] INFO  com.saucedemo.hooks.Hooks - <--- Finished Scenario: [Adicionar múltiplos produtos ao carrinho] | Status: PASSED
-2026-10-21 11:21:22.614 [main] INFO  com.saucedemo.config.DriverManager - Driver quit successfully.
-2026-10-21 11:21:22.621 [main] INFO  com.saucedemo.hooks.Hooks - ---> Starting Scenario: [Visualizar itens adicionados no carrinho] | Tags: [@checkout, @carrinho-visualizar]
-2026-10-21 11:21:22.621 [main] INFO  com.saucedemo.config.DriverManager - Initializing chrome driver | headless=true
-2026-10-21 11:21:22.965 [main] INFO  com.saucedemo.config.DriverManager - Driver initialized successfully: ChromeDriver
-2026-10-21 11:21:22.967 [main] INFO  com.saucedemo.pages.BasePage - Navigating to: https://www.saucedemo.com
-2026-10-21 11:21:23.163 [main] INFO  com.saucedemo.pages.LoginPage - Navigated to Login page.
-2026-10-21 11:21:23.163 [main] INFO  com.saucedemo.pages.LoginPage - Entering username: standard_user
-2026-10-21 11:21:23.306 [main] INFO  com.saucedemo.pages.LoginPage - Entering password.
-2026-10-21 11:21:23.412 [main] INFO  com.saucedemo.pages.LoginPage - Clicking login button.
-2026-10-21 11:21:23.516 [main] INFO  c.s.validators.LoginValidator - Validating successful login.
-2026-10-21 11:21:23.618 [main] INFO  c.s.validators.LoginValidator - Login validation passed: user is on Products page.
-2026-10-21 11:21:23.619 [main] INFO  com.saucedemo.pages.InventoryPage - Adding item to cart: sauce-labs-backpack
-2026-10-21 11:21:23.695 [main] INFO  com.saucedemo.pages.InventoryPage - Navigating to cart.
-2026-10-21 11:21:23.776 [main] INFO  c.s.validators.CheckoutValidator - Validating cart page is loaded.
-2026-10-21 11:21:23.844 [main] INFO  c.s.validators.CheckoutValidator - Validating cart contains item: Sauce Labs Backpack
-2026-10-21 11:21:23.868 [main] INFO  com.saucedemo.hooks.Hooks - <--- Finished Scenario: [Visualizar itens adicionados no carrinho] | Status: PASSED
-2026-10-21 11:21:23.942 [main] INFO  com.saucedemo.config.DriverManager - Driver quit successfully.
-2026-10-21 11:21:23.949 [main] INFO  com.saucedemo.hooks.Hooks - ---> Starting Scenario: [Finalizar compra com sucesso] | Tags: [@checkout, @smoke, @checkout-completo]
-2026-10-21 11:21:23.949 [main] INFO  com.saucedemo.config.DriverManager - Initializing chrome driver | headless=true
-2026-10-21 11:21:24.316 [main] INFO  com.saucedemo.config.DriverManager - Driver initialized successfully: ChromeDriver
-2026-10-21 11:21:24.317 [main] INFO  com.saucedemo.pages.BasePage - Navigating to: https://www.saucedemo.com
-2026-10-21 11:21:24.502 [main] INFO  com.saucedemo.pages.LoginPage - Navigated to Login page.
-2026-10-21 11:21:24.502 [main] INFO  com.saucedemo.pages.LoginPage - Entering username: standard_user
-2026-10-21 11:21:24.648 [main] INFO  com.saucedemo.pages.LoginPage - Entering password.
-2026-10-21 11:21:24.753 [main] INFO  com.saucedemo.pages.LoginPage - Clicking login button.
-2026-10-21 11:21:24.855 [main] INFO  c.s.validators.LoginValidator - Validating successful login.
-2026-10-21 11:21:24.958 [main] INFO  c.s.validators.LoginValidator - Login validation passed: user is on Products page.
-2026-10-21 11:21:24.960 [main] INFO  com.saucedemo.pages.InventoryPage - Adding item to cart: sauce-labs-backpack
-2026-10-21 11:21:25.031 [main] INFO  com.saucedemo.pages.InventoryPage - Navigating to cart.
-2026-10-21 11:21:25.110 [main] INFO  com.saucedemo.pages.CartPage - Proceeding to checkout.
-2026-10-21 11:21:25.192 [main] INFO  com.saucedemo.pages.CheckoutPage - Entering first name.
-2026-10-21 11:21:25.297 [main] INFO  com.saucedemo.pages.CheckoutPage - Entering last name.
-2026-10-21 11:21:25.380 [main] INFO  com.saucedemo.pages.CheckoutPage - Entering postal code.
-2026-10-21 11:21:25.476 [main] INFO  com.saucedemo.pages.CheckoutPage - Clicking continue button.
-2026-10-21 11:21:25.597 [main] INFO  c.s.validators.CheckoutValidator - Validating checkout step two (overview) loaded.
-2026-10-21 11:21:25.625 [main] INFO  com.saucedemo.pages.CheckoutPage - Clicking finish button.
-2026-10-21 11:21:25.698 [main] INFO  c.s.validators.CheckoutValidator - Validating order completion.
-2026-10-21 11:21:25.776 [main] INFO  c.s.validators.CheckoutValidator - Order completion validation passed. Header: Thank you for your order!
-2026-10-21 11:21:25.776 [main] INFO  c.s.validators.CheckoutValidator - Validating order confirmation page title.
-2026-10-21 11:21:25.801 [main] INFO  com.saucedemo.hooks.Hooks - <--- Finished Scenario: [Finalizar compra com sucesso] | Status: PASSED
-2026-10-21 11:21:25.876 [main] INFO  com.saucedemo.config.DriverManager - Driver quit successfully.
-2026-10-21 11:21:25.881 [main] INFO  com.saucedemo.hooks.Hooks - ---> Starting Scenario: [Tentar finalizar checkout com campos obrigatórios em branco] | Tags: [@checkout, @checkout-campos-obrigatorios]
-2026-10-21 11:21:25.881 [main] INFO  com.saucedemo.config.DriverManager - Initializing chrome driver | headless=true
-2026-10-21 11:21:26.259 [main] INFO  com.saucedemo.config.DriverManager - Driver initialized successfully: ChromeDriver
-2026-10-21 11:21:26.261 [main] INFO  com.saucedemo.pages.BasePage - Navigating to: https://www.saucedemo.com
-2026-10-21 11:21:26.450 [main] INFO  com.saucedemo.pages.LoginPage - Navigated to Login page.
-2026-10-21 11:21:26.450 [main] INFO  com.saucedemo.pages.LoginPage - Entering username: standard_user
-2026-10-21 11:21:26.594 [main] INFO  com.saucedemo.pages.LoginPage - Entering password.
-2026-10-21 11:21:26.694 [main] INFO  com.saucedemo.pages.LoginPage - Clicking login button.
-2026-10-21 11:21:26.796 [main] INFO  c.s.validators.LoginValidator - Validating successful login.
-2026-10-21 11:21:26.893 [main] INFO  c.s.validators.LoginValidator - Login validation passed: user is on Products page.
-2026-10-21 11:21:26.894 [main] INFO  com.saucedemo.pages.InventoryPage - Adding item to cart: sauce-labs-backpack
-2026-10-21 11:21:26.963 [main] INFO  com.saucedemo.pages.InventoryPage - Navigating to cart.
-2026-10-21 11:21:27.040 [main] INFO  com.saucedemo.pages.CartPage - Proceeding to checkout.
-2026-10-21 11:21:27.115 [main] INFO  com.saucedemo.pages.CheckoutPage - Clicking continue with empty form.
-2026-10-21 11:21:27.202 [main] INFO  c.s.validators.CheckoutValidator - Validating checkout error: 'Error: First Name is required'
-2026-10-21 11:21:27.257 [main] INFO  com.saucedemo.hooks.Hooks - <--- Finished Scenario: [Tentar finalizar checkout com campos obrigatórios em branco] | Status: PASSED
-2026-10-21 11:21:27.330 [main] INFO  com.saucedemo.config.DriverManager - Driver quit successfully.
-2026-10-21 11:21:27.339 [main] INFO  com.saucedemo.hooks.Hooks - ---> Starting Scenario: [Login com credenciais válidas] | Tags: [@login, @smoke, @login-valido]
-2026-10-21 11:21:27.340 [main] INFO  com.saucedemo.config.DriverManager - Initializing chrome driver | headless=true
-2026-10-21 11:21:27.712 [main] INFO  com.saucedemo.config.DriverManager - Driver initialized successfully: ChromeDriver
-2026-10-21 11:21:27.713 [main] INFO  com.saucedemo.pages.BasePage - Navigating to: https://www.saucedemo.com
-2026-10-21 11:21:27.901 [main] INFO  com.saucedemo.pages.LoginPage - Navigated to Login page.
-2026-10-21 11:21:27.902 [main] INFO  com.saucedemo.pages.LoginPage - Entering username: standard_user
-2026-10-21 11:21:28.063 [main] INFO  com.saucedemo.pages.LoginPage - Entering password.
-2026-10-21 11:21:28.174 [main] INFO  com.saucedemo.pages.LoginPage - Clicking login button.
-2026-10-21 11:21:28.276 [main] INFO  c.s.validators.LoginValidator - Validating successful login.
-2026-10-21 11:21:28.376 [main] INFO  c.s.validators.LoginValidator - Login validation passed: user is on Products page.
-2026-10-21 11:21:28.376 [main] INFO  com.saucedemo.hooks.Hooks - <--- Finished Scenario: [Login com credenciais válidas] | Status: PASSED
-2026-10-21 11:21:28.449 [main] INFO  com.saucedemo.config.DriverManager - Driver quit successfully.
-2026-10-21 11:21:28.454 [main] INFO  com.saucedemo.hooks.Hooks - ---> Starting Scenario: [Login com senha inválida] | Tags: [@login, @login-senha-invalida]
-2026-10-21 11:21:28.454 [main] INFO  com.saucedemo.config.DriverManager - Initializing chrome driver | headless=true
-2026-10-21 11:21:28.819 [main] INFO  com.saucedemo.config.DriverManager - Driver initialized successfully: ChromeDriver
-2026-10-21 11:21:28.820 [main] INFO  com.saucedemo.pages.BasePage - Navigating to: https://www.saucedemo.com
-2026-10-21 11:21:29.005 [main] INFO  com.saucedemo.pages.LoginPage - Navigated to Login page.
-2026-10-21 11:21:29.007 [main] INFO  com.saucedemo.pages.LoginPage - Entering username: standard_user
-2026-10-21 11:21:29.146 [main] INFO  com.saucedemo.pages.LoginPage - Entering password.
-2026-10-21 11:21:29.262 [main] INFO  com.saucedemo.pages.LoginPage - Clicking login button.
-2026-10-21 11:21:29.367 [main] INFO  c.s.validators.LoginValidator - Validating failed login with expected message: 'Epic sadface: Username and password do not match any user in this service'
-2026-10-21 11:21:29.438 [main] INFO  c.s.validators.LoginValidator - Login failure validation passed.
-2026-10-21 11:21:29.439 [main] INFO  com.saucedemo.hooks.Hooks - <--- Finished Scenario: [Login com senha inválida] | Status: PASSED
-2026-10-21 11:21:29.513 [main] INFO  com.saucedemo.config.DriverManager - Driver quit successfully.
-2026-10-21 11:21:29.518 [main] INFO  com.saucedemo.hooks.Hooks - ---> Starting Scenario: [Login com usuário inexistente] | Tags: [@login, @login-usuario-inexistente]
-2026-10-21 11:21:29.518 [main] INFO  com.saucedemo.config.DriverManager - Initializing chrome driver | headless=true
-2026-10-21 11:21:29.857 [main] INFO  com.saucedemo.config.DriverManager - Driver initialized successfully: ChromeDriver
-2026-10-21 11:21:29.858 [main] INFO  com.saucedemo.pages.BasePage - Navigating to: https://www.saucedemo.com
-2026-10-21 11:21:30.061 [main] INFO  com.saucedemo.pages.LoginPage - Navigated to Login page.
-2026-10-21 11:21:30.063 [main] INFO  com.saucedemo.pages.LoginPage - Entering username: usuario_inexistente
-2026-10-21 11:21:30.210 [main] INFO  com.saucedemo.pages.LoginPage - Entering password.
-2026-10-21 11:21:30.316 [main] INFO  com.saucedemo.pages.LoginPage - Clicking login button.
-2026-10-21 11:21:30.418 [main] INFO  c.s.validators.LoginValidator - Validating failed login with expected message: 'Epic sadface: Username and password do not match any user in this service'
-2026-10-21 11:21:30.492 [main] INFO  c.s.validators.LoginValidator - Login failure validation passed.
-2026-10-21 11:21:30.493 [main] INFO  com.saucedemo.hooks.Hooks - <--- Finished Scenario: [Login com usuário inexistente] | Status: PASSED
-2026-10-21 11:21:30.566 [main] INFO  com.saucedemo.config.DriverManager - Driver quit successfully.
-2026-10-21 11:21:30.570 [main] INFO  com.saucedemo.hooks.Hooks - ---> Starting Scenario: [Login com campos em branco] | Tags: [@login, @login-campos-em-branco]
-2026-10-21 11:21:30.570 [main] INFO  com.saucedemo.config.DriverManager - Initializing chrome driver | headless=true
-2026-10-21 11:21:30.937 [main] INFO  com.saucedemo.config.DriverManager - Driver initialized successfully: ChromeDriver
-2026-10-21 11:21:30.938 [main] INFO  com.saucedemo.pages.BasePage - Navigating to: https://www.saucedemo.com
-2026-10-21 11:21:31.130 [main] INFO  com.saucedemo.pages.LoginPage - Navigated to Login page.
-2026-10-21 11:21:31.131 [main] INFO  com.saucedemo.pages.LoginPage - Submitting empty login form.
-2026-10-21 11:21:31.257 [main] INFO  c.s.validators.LoginValidator - Validating failed login with expected message: 'Epic sadface: Username is required'
-2026-10-21 11:21:31.340 [main] INFO  c.s.validators.LoginValidator - Login failure validation passed.
-2026-10-21 11:21:31.341 [main] INFO  com.saucedemo.hooks.Hooks - <--- Finished Scenario: [Login com campos em branco] | Status: PASSED
-2026-10-21 11:21:31.414 [main] INFO  com.saucedemo.config.DriverManager - Driver quit successfully.
-2026-10-21 11:21:31.418 [main] INFO  com.saucedemo.hooks.Hooks - ---> Starting Scenario: [Login sem informar a senha] | Tags: [@login, @login-senha-em-branco]
-2026-10-21 11:21:31.418 [main] INFO  com.saucedemo.config.DriverManager - Initializing chrome driver | headless=true
-2026-10-21 11:21:31.765 [main] INFO  com.saucedemo.config.DriverManager - Driver initialized successfully: ChromeDriver
-2026-10-21 11:21:31.766 [main] INFO  com.saucedemo.pages.BasePage - Navigating to: https://www.saucedemo.com
-2026-10-21 11:21:31.963 [main] INFO  com.saucedemo.pages.LoginPage - Navigated to Login page.
-2026-10-21 11:21:31.964 [main] INFO  com.saucedemo.pages.LoginPage - Submitting form with empty password.
-2026-10-21 11:21:32.205 [main] INFO  c.s.validators.LoginValidator - Validating failed login with expected message: 'Epic sadface: Password is required'
-2026-10-21 11:21:32.288 [main] INFO  c.s.validators.LoginValidator - Login failure validation passed.
-2026-10-21 11:21:32.289 [main] INFO  com.saucedemo.hooks.Hooks - <--- Finished Scenario: [Login sem informar a senha] | Status: PASSED
-2026-10-21 11:21:32.365 [main] INFO  com.saucedemo.config.DriverManager - Driver quit successfully.
-2026-10-21 11:21:32.368 [main] INFO  com.saucedemo.hooks.Hooks - ---> Starting Scenario: [Login com usuário bloqueado] | Tags: [@login, @login-usuario-bloqueado]
-2026-10-21 11:21:32.368 [main] INFO  com.saucedemo.config.DriverManager - Initializing chrome driver | headless=true
-2026-10-21 11:21:32.744 [main] INFO  com.saucedemo.config.DriverManager - Driver initialized successfully: ChromeDriver
-2026-10-21 11:21:32.745 [main] INFO  com.saucedemo.pages.BasePage - Navigating to: https://www.saucedemo.com
-2026-10-21 11:21:32.935 [main] INFO  com.saucedemo.pages.LoginPage - Navigated to Login page.
-2026-10-21 11:21:32.938 [main] INFO  com.saucedemo.pages.LoginPage - Entering username: locked_out_user
-2026-10-21 11:21:33.078 [main] INFO  com.saucedemo.pages.LoginPage - Entering password.
-2026-10-21 11:21:33.178 [main] INFO  com.saucedemo.pages.LoginPage - Clicking login button.
-2026-10-21 11:21:33.281 [main] INFO  c.s.validators.LoginValidator - Validating failed login with expected message: 'Epic sadface: Sorry, this user has been locked out'
-2026-10-21 11:21:33.351 [main] INFO  c.s.validators.LoginValidator - Login failure validation passed.
-2026-10-21 11:21:33.352 [main] INFO  com.saucedemo.hooks.Hooks - <--- Finished Scenario: [Login com usuário bloqueado] | Status: PASSED
-2026-10-21 11:21:33.426 [main] INFO  com.saucedemo.config.DriverManager - Driver quit successfully.
-2026-10-21 11:21:33.427 [main] INFO  com.saucedemo.hooks.Hooks - ========== Test Suite Completed | Report generated ==========
+2026-10-22 11:20:27.056 [main] INFO  com.saucedemo.hooks.Hooks - ========== Starting Test Suite ==========
+2026-10-22 11:20:27.159 [main] INFO  com.saucedemo.hooks.Hooks - ---> Starting Scenario: [Adicionar um produto ao carrinho] | Tags: [@checkout, @smoke, @carrinho-adicionar]
+2026-10-22 11:20:27.161 [main] INFO  com.saucedemo.config.ConfigManager - Configuration loaded from config.properties
+2026-10-22 11:20:27.161 [main] INFO  com.saucedemo.config.DriverManager - Initializing chrome driver | headless=true
+2026-10-22 11:20:35.907 [main] INFO  com.saucedemo.config.DriverManager - Driver initialized successfully: ChromeDriver
+2026-10-22 11:20:35.919 [main] INFO  com.saucedemo.pages.BasePage - Navigating to: https://www.saucedemo.com
+2026-10-22 11:20:36.335 [main] INFO  com.saucedemo.pages.LoginPage - Navigated to Login page.
+2026-10-22 11:20:36.336 [main] INFO  com.saucedemo.pages.LoginPage - Entering username: standard_user
+2026-10-22 11:20:37.121 [main] INFO  com.saucedemo.pages.LoginPage - Entering password.
+2026-10-22 11:20:37.177 [main] INFO  com.saucedemo.pages.LoginPage - Clicking login button.
+2026-10-22 11:20:37.504 [main] INFO  c.s.validators.LoginValidator - Validating successful login.
+2026-10-22 11:20:37.714 [main] INFO  c.s.validators.LoginValidator - Login validation passed: user is on Products page.
+2026-10-22 11:20:37.716 [main] INFO  com.saucedemo.pages.InventoryPage - Adding item to cart: sauce-labs-backpack
+2026-10-22 11:20:37.769 [main] INFO  c.s.validators.CheckoutValidator - Validating item count in cart badge: expected=1
+2026-10-22 11:20:37.797 [main] INFO  com.saucedemo.hooks.Hooks - <--- Finished Scenario: [Adicionar um produto ao carrinho] | Status: PASSED
+2026-10-22 11:20:37.880 [main] INFO  com.saucedemo.config.DriverManager - Driver quit successfully.
+2026-10-22 11:20:37.887 [main] INFO  com.saucedemo.hooks.Hooks - ---> Starting Scenario: [Adicionar múltiplos produtos ao carrinho] | Tags: [@checkout, @carrinho-multiplos-itens]
+2026-10-22 11:20:37.887 [main] INFO  com.saucedemo.config.DriverManager - Initializing chrome driver | headless=true
+2026-10-22 11:20:38.233 [main] INFO  com.saucedemo.config.DriverManager - Driver initialized successfully: ChromeDriver
+2026-10-22 11:20:38.234 [main] INFO  com.saucedemo.pages.BasePage - Navigating to: https://www.saucedemo.com
+2026-10-22 11:20:38.423 [main] INFO  com.saucedemo.pages.LoginPage - Navigated to Login page.
+2026-10-22 11:20:38.424 [main] INFO  com.saucedemo.pages.LoginPage - Entering username: standard_user
+2026-10-22 11:20:38.512 [main] INFO  com.saucedemo.pages.LoginPage - Entering password.
+2026-10-22 11:20:38.569 [main] INFO  com.saucedemo.pages.LoginPage - Clicking login button.
+2026-10-22 11:20:38.625 [main] INFO  c.s.validators.LoginValidator - Validating successful login.
+2026-10-22 11:20:38.688 [main] INFO  c.s.validators.LoginValidator - Login validation passed: user is on Products page.
+2026-10-22 11:20:38.689 [main] INFO  com.saucedemo.pages.InventoryPage - Adding item to cart: sauce-labs-backpack
+2026-10-22 11:20:38.734 [main] INFO  com.saucedemo.pages.InventoryPage - Adding item to cart: sauce-labs-bike-light
+2026-10-22 11:20:38.785 [main] INFO  c.s.validators.CheckoutValidator - Validating item count in cart badge: expected=2
+2026-10-22 11:20:38.812 [main] INFO  com.saucedemo.hooks.Hooks - <--- Finished Scenario: [Adicionar múltiplos produtos ao carrinho] | Status: PASSED
+2026-10-22 11:20:38.886 [main] INFO  com.saucedemo.config.DriverManager - Driver quit successfully.
+2026-10-22 11:20:38.890 [main] INFO  com.saucedemo.hooks.Hooks - ---> Starting Scenario: [Visualizar itens adicionados no carrinho] | Tags: [@checkout, @carrinho-visualizar]
+2026-10-22 11:20:38.890 [main] INFO  com.saucedemo.config.DriverManager - Initializing chrome driver | headless=true
+2026-10-22 11:20:39.185 [main] INFO  com.saucedemo.config.DriverManager - Driver initialized successfully: ChromeDriver
+2026-10-22 11:20:39.186 [main] INFO  com.saucedemo.pages.BasePage - Navigating to: https://www.saucedemo.com
+2026-10-22 11:20:39.429 [main] INFO  com.saucedemo.pages.LoginPage - Navigated to Login page.
+2026-10-22 11:20:39.430 [main] INFO  com.saucedemo.pages.LoginPage - Entering username: standard_user
+2026-10-22 11:20:39.502 [main] INFO  com.saucedemo.pages.LoginPage - Entering password.
+2026-10-22 11:20:39.558 [main] INFO  com.saucedemo.pages.LoginPage - Clicking login button.
+2026-10-22 11:20:39.615 [main] INFO  c.s.validators.LoginValidator - Validating successful login.
+2026-10-22 11:20:39.683 [main] INFO  c.s.validators.LoginValidator - Login validation passed: user is on Products page.
+2026-10-22 11:20:39.683 [main] INFO  com.saucedemo.pages.InventoryPage - Adding item to cart: sauce-labs-backpack
+2026-10-22 11:20:39.734 [main] INFO  com.saucedemo.pages.InventoryPage - Navigating to cart.
+2026-10-22 11:20:39.792 [main] INFO  c.s.validators.CheckoutValidator - Validating cart page is loaded.
+2026-10-22 11:20:39.835 [main] INFO  c.s.validators.CheckoutValidator - Validating cart contains item: Sauce Labs Backpack
+2026-10-22 11:20:39.850 [main] INFO  com.saucedemo.hooks.Hooks - <--- Finished Scenario: [Visualizar itens adicionados no carrinho] | Status: PASSED
+2026-10-22 11:20:39.964 [main] INFO  com.saucedemo.config.DriverManager - Driver quit successfully.
+2026-10-22 11:20:39.968 [main] INFO  com.saucedemo.hooks.Hooks - ---> Starting Scenario: [Finalizar compra com sucesso] | Tags: [@checkout, @smoke, @checkout-completo]
+2026-10-22 11:20:39.968 [main] INFO  com.saucedemo.config.DriverManager - Initializing chrome driver | headless=true
+2026-10-22 11:20:40.251 [main] INFO  com.saucedemo.config.DriverManager - Driver initialized successfully: ChromeDriver
+2026-10-22 11:20:40.252 [main] INFO  com.saucedemo.pages.BasePage - Navigating to: https://www.saucedemo.com
+2026-10-22 11:20:40.442 [main] INFO  com.saucedemo.pages.LoginPage - Navigated to Login page.
+2026-10-22 11:20:40.442 [main] INFO  com.saucedemo.pages.LoginPage - Entering username: standard_user
+2026-10-22 11:20:40.526 [main] INFO  com.saucedemo.pages.LoginPage - Entering password.
+2026-10-22 11:20:40.581 [main] INFO  com.saucedemo.pages.LoginPage - Clicking login button.
+2026-10-22 11:20:40.633 [main] INFO  c.s.validators.LoginValidator - Validating successful login.
+2026-10-22 11:20:40.703 [main] INFO  c.s.validators.LoginValidator - Login validation passed: user is on Products page.
+2026-10-22 11:20:40.704 [main] INFO  com.saucedemo.pages.InventoryPage - Adding item to cart: sauce-labs-backpack
+2026-10-22 11:20:40.747 [main] INFO  com.saucedemo.pages.InventoryPage - Navigating to cart.
+2026-10-22 11:20:40.796 [main] INFO  com.saucedemo.pages.CartPage - Proceeding to checkout.
+2026-10-22 11:20:41.361 [main] INFO  com.saucedemo.pages.CheckoutPage - Entering first name.
+2026-10-22 11:20:41.486 [main] INFO  com.saucedemo.pages.CheckoutPage - Entering last name.
+2026-10-22 11:20:41.533 [main] INFO  com.saucedemo.pages.CheckoutPage - Entering postal code.
+2026-10-22 11:20:41.582 [main] INFO  com.saucedemo.pages.CheckoutPage - Clicking continue button.
+2026-10-22 11:20:41.795 [main] INFO  c.s.validators.CheckoutValidator - Validating checkout step two (overview) loaded.
+2026-10-22 11:20:41.814 [main] INFO  com.saucedemo.pages.CheckoutPage - Clicking finish button.
+2026-10-22 11:20:41.859 [main] INFO  c.s.validators.CheckoutValidator - Validating order completion.
+2026-10-22 11:20:41.907 [main] INFO  c.s.validators.CheckoutValidator - Order completion validation passed. Header: Thank you for your order!
+2026-10-22 11:20:41.908 [main] INFO  c.s.validators.CheckoutValidator - Validating order confirmation page title.
+2026-10-22 11:20:41.922 [main] INFO  com.saucedemo.hooks.Hooks - <--- Finished Scenario: [Finalizar compra com sucesso] | Status: PASSED
+2026-10-22 11:20:41.996 [main] INFO  com.saucedemo.config.DriverManager - Driver quit successfully.
+2026-10-22 11:20:41.999 [main] INFO  com.saucedemo.hooks.Hooks - ---> Starting Scenario: [Tentar finalizar checkout com campos obrigatórios em branco] | Tags: [@checkout, @checkout-campos-obrigatorios]
+2026-10-22 11:20:41.999 [main] INFO  com.saucedemo.config.DriverManager - Initializing chrome driver | headless=true
+2026-10-22 11:20:42.276 [main] INFO  com.saucedemo.config.DriverManager - Driver initialized successfully: ChromeDriver
+2026-10-22 11:20:42.277 [main] INFO  com.saucedemo.pages.BasePage - Navigating to: https://www.saucedemo.com
+2026-10-22 11:20:42.466 [main] INFO  com.saucedemo.pages.LoginPage - Navigated to Login page.
+2026-10-22 11:20:42.467 [main] INFO  com.saucedemo.pages.LoginPage - Entering username: standard_user
+2026-10-22 11:20:42.550 [main] INFO  com.saucedemo.pages.LoginPage - Entering password.
+2026-10-22 11:20:42.604 [main] INFO  com.saucedemo.pages.LoginPage - Clicking login button.
+2026-10-22 11:20:42.663 [main] INFO  c.s.validators.LoginValidator - Validating successful login.
+2026-10-22 11:20:42.722 [main] INFO  c.s.validators.LoginValidator - Login validation passed: user is on Products page.
+2026-10-22 11:20:42.723 [main] INFO  com.saucedemo.pages.InventoryPage - Adding item to cart: sauce-labs-backpack
+2026-10-22 11:20:42.765 [main] INFO  com.saucedemo.pages.InventoryPage - Navigating to cart.
+2026-10-22 11:20:42.814 [main] INFO  com.saucedemo.pages.CartPage - Proceeding to checkout.
+2026-10-22 11:20:43.369 [main] INFO  com.saucedemo.pages.CheckoutPage - Clicking continue with empty form.
+2026-10-22 11:20:43.424 [main] INFO  c.s.validators.CheckoutValidator - Validating checkout error: 'Error: First Name is required'
+2026-10-22 11:20:43.455 [main] INFO  com.saucedemo.hooks.Hooks - <--- Finished Scenario: [Tentar finalizar checkout com campos obrigatórios em branco] | Status: PASSED
+2026-10-22 11:20:43.578 [main] INFO  com.saucedemo.config.DriverManager - Driver quit successfully.
+2026-10-22 11:20:43.584 [main] INFO  com.saucedemo.hooks.Hooks - ---> Starting Scenario: [Login com credenciais válidas] | Tags: [@login, @smoke, @login-valido]
+2026-10-22 11:20:43.584 [main] INFO  com.saucedemo.config.DriverManager - Initializing chrome driver | headless=true
+2026-10-22 11:20:43.883 [main] INFO  com.saucedemo.config.DriverManager - Driver initialized successfully: ChromeDriver
+2026-10-22 11:20:43.884 [main] INFO  com.saucedemo.pages.BasePage - Navigating to: https://www.saucedemo.com
+2026-10-22 11:20:45.165 [main] INFO  com.saucedemo.pages.LoginPage - Navigated to Login page.
+2026-10-22 11:20:45.166 [main] INFO  com.saucedemo.pages.LoginPage - Entering username: standard_user
+2026-10-22 11:20:45.249 [main] INFO  com.saucedemo.pages.LoginPage - Entering password.
+2026-10-22 11:20:45.309 [main] INFO  com.saucedemo.pages.LoginPage - Clicking login button.
+2026-10-22 11:20:45.364 [main] INFO  c.s.validators.LoginValidator - Validating successful login.
+2026-10-22 11:20:45.425 [main] INFO  c.s.validators.LoginValidator - Login validation passed: user is on Products page.
+2026-10-22 11:20:45.426 [main] INFO  com.saucedemo.hooks.Hooks - <--- Finished Scenario: [Login com credenciais válidas] | Status: PASSED
+2026-10-22 11:20:45.499 [main] INFO  com.saucedemo.config.DriverManager - Driver quit successfully.
+2026-10-22 11:20:45.501 [main] INFO  com.saucedemo.hooks.Hooks - ---> Starting Scenario: [Login com senha inválida] | Tags: [@login, @login-senha-invalida]
+2026-10-22 11:20:45.501 [main] INFO  com.saucedemo.config.DriverManager - Initializing chrome driver | headless=true
+2026-10-22 11:20:45.771 [main] INFO  com.saucedemo.config.DriverManager - Driver initialized successfully: ChromeDriver
+2026-10-22 11:20:45.772 [main] INFO  com.saucedemo.pages.BasePage - Navigating to: https://www.saucedemo.com
+2026-10-22 11:20:45.956 [main] INFO  com.saucedemo.pages.LoginPage - Navigated to Login page.
+2026-10-22 11:20:45.957 [main] INFO  com.saucedemo.pages.LoginPage - Entering username: standard_user
+2026-10-22 11:20:46.041 [main] INFO  com.saucedemo.pages.LoginPage - Entering password.
+2026-10-22 11:20:46.099 [main] INFO  com.saucedemo.pages.LoginPage - Clicking login button.
+2026-10-22 11:20:46.155 [main] INFO  c.s.validators.LoginValidator - Validating failed login with expected message: 'Epic sadface: Username and password do not match any user in this service'
+2026-10-22 11:20:46.199 [main] INFO  c.s.validators.LoginValidator - Login failure validation passed.
+2026-10-22 11:20:46.199 [main] INFO  com.saucedemo.hooks.Hooks - <--- Finished Scenario: [Login com senha inválida] | Status: PASSED
+2026-10-22 11:20:46.272 [main] INFO  com.saucedemo.config.DriverManager - Driver quit successfully.
+2026-10-22 11:20:46.275 [main] INFO  com.saucedemo.hooks.Hooks - ---> Starting Scenario: [Login com usuário inexistente] | Tags: [@login, @login-usuario-inexistente]
+2026-10-22 11:20:46.275 [main] INFO  com.saucedemo.config.DriverManager - Initializing chrome driver | headless=true
+2026-10-22 11:20:46.545 [main] INFO  com.saucedemo.config.DriverManager - Driver initialized successfully: ChromeDriver
+2026-10-22 11:20:46.545 [main] INFO  com.saucedemo.pages.BasePage - Navigating to: https://www.saucedemo.com
+2026-10-22 11:20:46.736 [main] INFO  com.saucedemo.pages.LoginPage - Navigated to Login page.
+2026-10-22 11:20:46.737 [main] INFO  com.saucedemo.pages.LoginPage - Entering username: usuario_inexistente
+2026-10-22 11:20:46.829 [main] INFO  com.saucedemo.pages.LoginPage - Entering password.
+2026-10-22 11:20:46.880 [main] INFO  com.saucedemo.pages.LoginPage - Clicking login button.
+2026-10-22 11:20:46.933 [main] INFO  c.s.validators.LoginValidator - Validating failed login with expected message: 'Epic sadface: Username and password do not match any user in this service'
+2026-10-22 11:20:46.980 [main] INFO  c.s.validators.LoginValidator - Login failure validation passed.
+2026-10-22 11:20:46.981 [main] INFO  com.saucedemo.hooks.Hooks - <--- Finished Scenario: [Login com usuário inexistente] | Status: PASSED
+2026-10-22 11:20:47.054 [main] INFO  com.saucedemo.config.DriverManager - Driver quit successfully.
+2026-10-22 11:20:47.057 [main] INFO  com.saucedemo.hooks.Hooks - ---> Starting Scenario: [Login com campos em branco] | Tags: [@login, @login-campos-em-branco]
+2026-10-22 11:20:47.057 [main] INFO  com.saucedemo.config.DriverManager - Initializing chrome driver | headless=true
+2026-10-22 11:20:47.326 [main] INFO  com.saucedemo.config.DriverManager - Driver initialized successfully: ChromeDriver
+2026-10-22 11:20:47.327 [main] INFO  com.saucedemo.pages.BasePage - Navigating to: https://www.saucedemo.com
+2026-10-22 11:20:47.563 [main] INFO  com.saucedemo.pages.LoginPage - Navigated to Login page.
+2026-10-22 11:20:47.564 [main] INFO  com.saucedemo.pages.LoginPage - Submitting empty login form.
+2026-10-22 11:20:47.629 [main] INFO  c.s.validators.LoginValidator - Validating failed login with expected message: 'Epic sadface: Username is required'
+2026-10-22 11:20:47.676 [main] INFO  c.s.validators.LoginValidator - Login failure validation passed.
+2026-10-22 11:20:47.676 [main] INFO  com.saucedemo.hooks.Hooks - <--- Finished Scenario: [Login com campos em branco] | Status: PASSED
+2026-10-22 11:20:47.750 [main] INFO  com.saucedemo.config.DriverManager - Driver quit successfully.
+2026-10-22 11:20:47.753 [main] INFO  com.saucedemo.hooks.Hooks - ---> Starting Scenario: [Login sem informar a senha] | Tags: [@login, @login-senha-em-branco]
+2026-10-22 11:20:47.753 [main] INFO  com.saucedemo.config.DriverManager - Initializing chrome driver | headless=true
+2026-10-22 11:20:48.007 [main] INFO  com.saucedemo.config.DriverManager - Driver initialized successfully: ChromeDriver
+2026-10-22 11:20:48.008 [main] INFO  com.saucedemo.pages.BasePage - Navigating to: https://www.saucedemo.com
+2026-10-22 11:20:48.202 [main] INFO  com.saucedemo.pages.LoginPage - Navigated to Login page.
+2026-10-22 11:20:48.203 [main] INFO  com.saucedemo.pages.LoginPage - Submitting form with empty password.
+2026-10-22 11:20:48.340 [main] INFO  c.s.validators.LoginValidator - Validating failed login with expected message: 'Epic sadface: Password is required'
+2026-10-22 11:20:48.384 [main] INFO  c.s.validators.LoginValidator - Login failure validation passed.
+2026-10-22 11:20:48.385 [main] INFO  com.saucedemo.hooks.Hooks - <--- Finished Scenario: [Login sem informar a senha] | Status: PASSED
+2026-10-22 11:20:48.459 [main] INFO  com.saucedemo.config.DriverManager - Driver quit successfully.
+2026-10-22 11:20:48.462 [main] INFO  com.saucedemo.hooks.Hooks - ---> Starting Scenario: [Login com usuário bloqueado] | Tags: [@login, @login-usuario-bloqueado]
+2026-10-22 11:20:48.462 [main] INFO  com.saucedemo.config.DriverManager - Initializing chrome driver | headless=true
+2026-10-22 11:20:48.727 [main] INFO  com.saucedemo.config.DriverManager - Driver initialized successfully: ChromeDriver
+2026-10-22 11:20:48.729 [main] INFO  com.saucedemo.pages.BasePage - Navigating to: https://www.saucedemo.com
+2026-10-22 11:20:48.912 [main] INFO  com.saucedemo.pages.LoginPage - Navigated to Login page.
+2026-10-22 11:20:48.914 [main] INFO  com.saucedemo.pages.LoginPage - Entering username: locked_out_user
+2026-10-22 11:20:49.000 [main] INFO  com.saucedemo.pages.LoginPage - Entering password.
+2026-10-22 11:20:49.052 [main] INFO  com.saucedemo.pages.LoginPage - Clicking login button.
+2026-10-22 11:20:49.109 [main] INFO  c.s.validators.LoginValidator - Validating failed login with expected message: 'Epic sadface: Sorry, this user has been locked out'
+2026-10-22 11:20:49.154 [main] INFO  c.s.validators.LoginValidator - Login failure validation passed.
+2026-10-22 11:20:49.154 [main] INFO  com.saucedemo.hooks.Hooks - <--- Finished Scenario: [Login com usuário bloqueado] | Status: PASSED
+2026-10-22 11:20:49.228 [main] INFO  com.saucedemo.config.DriverManager - Driver quit successfully.
+2026-10-22 11:20:49.230 [main] INFO  com.saucedemo.hooks.Hooks - ========== Test Suite Completed | Report generated ==========
